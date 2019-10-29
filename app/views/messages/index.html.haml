@@ -1,0 +1,43 @@
+.wrapper
+  .chat-side
+    .side-header
+      .side-header__box
+        %p.side-header__box__user-name rrr
+        %ul.side-header__box__menu
+          %li.side-header__box__menu__new-group
+            %a{:href => "#"}
+              %i.fa.fa-edit
+          %li.side-header__box__menu__edit-user
+            %a{:href => "#"}
+              %i.fa.fa-cog
+    .groups
+      %a{:href => "#"}
+        .group
+          %p.group__group-name wwwwwwww
+          %p.group__latest-message aaaa
+  .chat-main
+    .main-header
+      .main-header__left-box
+        %h2.main-header__left-box__current-group{"data-group_id" => "3542"}
+          wwwwwwww
+        %ul.main-header__left-box__member-list
+          Member：
+          %li.main-header__left-box__member-list__member rrr
+      %a{:href => "#"}
+        .main-header__edit-btn Edit
+    .messages
+      .message{"data-message_id" => "8810"}
+        .message__upper-info
+          %p.message__upper-info__talker rrr
+          %p.message__upper-info__date 2019/10/26(Sat) 15:02:20
+        %p.message__text aaaa
+    .form
+      %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/3542/messages", :enctype => "multipart/form-data", :method => "post"}
+        -# %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+        -# %input{:name => "authenticity_token", :type => "hidden", :value => "DLcpXbYyCpQdqXK21A8j7g/U6PAZLuAeBESVBm0O07gJXEHBqDaJxZrJlvGynmttvWiIaVDm/U9MjGTWfLXQHA=="}/
+        .input-box
+          %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+          %label.input-box__image{:for => "message_image"}
+            %i.fa.fa-image
+            -# %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
+        %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
