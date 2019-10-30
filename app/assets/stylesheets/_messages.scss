@@ -5,13 +5,11 @@
 .wrapper { 
   width: 100vw;
   height: 100vh;
-  // float: left; 
   .chat-side { 
     height: 100%;
     width: 300px;
     color: white;
     float: left;
-    // background-color: #253141;
     .side-header{
       background-color: #253141;
       height: 100px;
@@ -60,7 +58,6 @@
   .chat-main { 
     width: calc(100vw - 300px);
     float: left;
-  // height: 
     .main-header { 
       height: 100px;
       padding: 0 40px;
@@ -68,12 +65,9 @@
       justify-content: space-between;
       border: solid 1px #eee;
       overflow: scroll;
-      // display: block;
-      // position: fixed;
-      // z-index: 1px;
+      
       &__left-box{
         margin-top: 35px;
-        // display: flex;
         &__current-group{
           margin-bottom: 15px;
           color: #333333;
@@ -121,12 +115,10 @@
       background-color: #ddd;
       padding: 20px 40px;
       display: flex;
-      // text-align: center;
       .input-box{
          position: relative;
          width: 100%;
          margin-right: 50px;
-        //  margin-bottom: 50px;
          &__text{
            height: 50px;
            width: 100%;

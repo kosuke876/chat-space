@@ -5,13 +5,13 @@
         %p.side-header__box__user-name rrr
         %ul.side-header__box__menu
           %li.side-header__box__menu__new-group
-            %a{:href => "#"}
+            %a{href: "#"}
               %i.fa.fa-edit
           %li.side-header__box__menu__edit-user
-            %a{:href => "#"}
+            %a{href: "#"}
               %i.fa.fa-cog
     .groups
-      %a{:href => "#"}
+      %a{href: "#"}
         .group
           %p.group__group-name wwwwwwww
           %p.group__latest-message aaaa
@@ -23,7 +23,7 @@
         %ul.main-header__left-box__member-list
           Member：
           %li.main-header__left-box__member-list__member rrr
-      %a{:href => "#"}
+      %a{%href: "#"}
         .main-header__edit-btn Edit
     .messages
       .message{"data-message_id" => "8810"}
@@ -32,12 +32,10 @@
           %p.message__upper-info__date 2019/10/26(Sat) 15:02:20
         %p.message__text aaaa
     .form
-      %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/3542/messages", :enctype => "multipart/form-data", :method => "post"}
-        -# %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-        -# %input{:name => "authenticity_token", :type => "hidden", :value => "DLcpXbYyCpQdqXK21A8j7g/U6PAZLuAeBESVBm0O07gJXEHBqDaJxZrJlvGynmttvWiIaVDm/U9MjGTWfLXQHA=="}/
+      %form#new_message.new_message{"accept-charset" => "UTF-8", action:"/groups/3542/messages", enctype: "multipart/form-data", method: "post"}
+        
         .input-box
-          %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-          %label.input-box__image{:for => "message_image"}
+          %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
+          %label.input-box__image{%for: "message_image"}
             %i.fa.fa-image
-            -# %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
-        %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+        %input.submit-btn{"data-disable-with" => "Send", name: "commit", type: "submit", value: "Send"}/
